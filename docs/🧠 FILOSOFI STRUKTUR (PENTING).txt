@@ -1,0 +1,12 @@
+🧠 FILOSOFI STRUKTUR (PENTING)
+
+1️⃣ core/ = satu kali load
+➡️ TIDAK boleh dipakai untuk component UI.
+
+2️⃣ shared/ = boleh dipakai semua module
+➡️ TIDAK boleh inject service bisnis di sini.
+
+3️⃣ features/ = bisnis logic
+➡️ mirip bounded context
+➡️ gampang dipindah / dipisah nanti
+

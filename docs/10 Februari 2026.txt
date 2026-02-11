@@ -1,0 +1,13 @@
+10 Februari 2026
+
+- (Prisma) (Bugfix) : Disabled button NA di Cost seluruh section [SDA, SAP, INFRA]
+- (Prisma) (Bugfix) : Grand total tidak terkalkukasi jika SME tidak sesuai saat login
+- (Prisma) (TechDebt) : migrasi Risk/Hazard/Mitigation [SDA, SAP, INFRA] ke reusable component
+
+Issue
+- Login di SDA dan create risk lalu PUT Transaksi http://localhost:3080/v3/project/896b1043-99cc-4308-b0fa-c90fcffe19da : 500 Internal server error, untuk API ex-app berhasil terbuat : sudah di report ke mas ipul
+- Login di SAP dan create risk lalu PUT Transaksi http://localhost:3080/v3/project/896b1043-99cc-4308-b0fa-c90fcffe19da : 500 Internal server error, untuk API ex-app berhasil terbuat : sudah di report ke mas ipul
+- Create/Update Risk login sebagai SME INFRA : berhasil untuk api ex-app dan PUT transaction di Prisma : oke
+- Di aplikasi Risk Management, Subject masih kosong, sehingga Ketika berhasil jadi risk, tidak ter get ke web Prisma (untuk payload key subject sudah di isi) : http://172.16.41.27:4022/approval/draft/edit/181 : sudah di report ke mas rohmat dev risk management
+- Untuk response ex-app api, risk owner masih null : solved
+

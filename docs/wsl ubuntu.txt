@@ -1,0 +1,3 @@
+wsl ubuntu
+iqbalkurniawan
+121212
