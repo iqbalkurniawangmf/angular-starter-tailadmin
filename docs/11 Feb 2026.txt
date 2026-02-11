@@ -1,6 +1,0 @@
-11 Feb 2026
-
-- (Prisma) [FE] Testing E2E Fitur Create Rizk/Hazard/Mitigation : IPM-1016
-- (Prisma) [FE] Testing E2E Fitur Update Rizk/Hazard/Mitigation : IPM-1025
-- (Prisma) [FE] Melakukan Slicing Update Security Design : IPM-823
-- (Prisma) [FE] Melakukan Slicing Create Security Design : IPM-813
