@@ -3,10 +3,12 @@
   "version": "1.0.2",
   "scripts": {
     "ng": "ng",
-    "start": "npx ng serve",
-    "build": "npx ng build",
-    "test": "npx ng test",
-    "watch": "npx ng build --watch --configuration development"
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "docker:dev-build": "docker compose up --build",
+    "docker:dev": "docker compose up",
+    "docker:down": "docker compose down"
   },
   "private": true,
   "engines": {
@@ -45,7 +47,7 @@
   },
   "devDependencies": {
     "@angular/build": "21.0.4",
-    "@angular/cli": "21.0.4",
+    "@angular/cli": "^21.1.4",
     "@angular/compiler-cli": "21.0.6",
     "@types/jasmine": "5.1.0",
     "jasmine-core": "5.6.0",

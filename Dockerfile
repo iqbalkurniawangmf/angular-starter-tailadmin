@@ -1,15 +1,11 @@
-FROM node:20-alpine AS build
+FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm ci --legacy-peer-deps
+COPY package.json ./
 
-COPY . .
-RUN npx ng build --configuration production
+RUN npm install --legacy-peer-deps
 
-FROM nginx:alpine
-COPY --from=build /app/dist/ng-tailadmin /usr/share/nginx/html
+EXPOSE 4200
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npx", "ng", "serve", "--host", "0.0.0.0", "--port", "4200", "--poll", "2000"]
