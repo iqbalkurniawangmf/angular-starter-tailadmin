@@ -41,8 +41,8 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/profile/profile.component').then(m => m.ProfileComponent)
       },
       {
-        path: 'form-elements',
-        loadComponent: () => import('./pages/forms/form-elements/form-elements.component').then(m => m.FormElementsComponent)
+        path: 'form',
+        loadChildren: () => import('./pages/forms/form-routing.module').then(m => m.FormRoutingModule)
       },
       {
         path: 'basic-tables',
