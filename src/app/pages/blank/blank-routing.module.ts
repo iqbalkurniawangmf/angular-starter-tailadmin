@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: 'blank',
     component: BlankComponent,
-    title: 'Angular Blank | Starter Enterprise Angular'
-  }
+    title: 'Angular Blank | Starter Enterprise Angular',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class BlankRoutingModule {}

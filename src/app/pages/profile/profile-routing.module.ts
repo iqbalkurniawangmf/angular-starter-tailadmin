@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
-    title: 'Angular Profile | Starter Enterprise Angular'
-  }
+    title: 'Angular Profile | Starter Enterprise Angular',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ProfileRoutingModule {}

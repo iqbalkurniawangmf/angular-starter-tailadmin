@@ -1,0 +1,63 @@
+<div class="w-full">
+  <div class="flex items-center justify-between">
+    @for (step of steps; track $index; let i = $index) {
+      <ng-container>
+        <div class="flex items-center w-full">
+          <!-- Circle -->
+          <div
+            (click)="onStepClick(i)"
+            class="flex items-center justify-center w-10 h-10 rounded-full border-2 text-sm font-semibold transition-all duration-300"
+            [ngClass]="{
+              'bg-blue-600 border-blue-600 text-white': step.status === 'completed',
+              'bg-blue-100 border-blue-600 text-blue-600': step.status === 'active',
+              'bg-white border-gray-300 text-gray-400': step.status === 'upcoming',
+              'cursor-pointer hover:scale-105': clickable,
+            }"
+          >
+            <!-- Check Icon -->
+            @if (step.status === 'completed') {
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            }
+
+            @if (step.status !== 'completed') {
+              <span>
+                {{ i + 1 }}
+              </span>
+            }
+          </div>
+
+          <!-- Label -->
+          <div class="ml-3 hidden sm:block">
+            <p
+              class="text-sm font-medium"
+              [ngClass]="{
+                'text-blue-600': step.status !== 'upcoming',
+                'text-gray-400': step.status === 'upcoming',
+              }"
+            >
+              {{ step.label }}
+            </p>
+          </div>
+
+          <!-- Line -->
+          @if (i < steps.length - 1) {
+            <div
+              class="flex-1 h-0.5 mx-4"
+              [ngClass]="{
+                'bg-blue-600': steps[i].status === 'completed',
+                'bg-gray-300': steps[i].status !== 'completed',
+              }"
+            ></div>
+          }
+        </div>
+      </ng-container>
+    }
+  </div>
+</div>

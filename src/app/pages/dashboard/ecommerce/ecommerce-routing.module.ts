@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: EcommerceComponent,
-    title: 'Angular Dashboard | Starter Enterprise Angular'
-  }
+    title: 'Angular Dashboard | Starter Enterprise Angular',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class DashboardRoutingModule {}

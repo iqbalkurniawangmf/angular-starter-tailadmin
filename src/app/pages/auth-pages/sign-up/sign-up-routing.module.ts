@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: 'sign-up',
     component: SignUpComponent,
-    title: 'Angular Sign Up | Starter Enterprise Angular'
-  }
+    title: 'Angular Sign Up | Starter Enterprise Angular',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class SignUpRoutingModule {}

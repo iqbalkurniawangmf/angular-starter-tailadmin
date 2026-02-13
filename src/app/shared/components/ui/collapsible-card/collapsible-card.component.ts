@@ -4,12 +4,9 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-collapsible-card',
   templateUrl: './collapsible-card.component.html',
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
 })
 export class CollapsibleCardComponent {
-
   @Input() title: string = 'Card Title';
   @Input() defaultOpen: boolean = true;
 

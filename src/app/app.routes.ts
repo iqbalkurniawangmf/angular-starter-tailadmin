@@ -16,12 +16,11 @@ import { AppLayoutComponent } from './shared/layout/app-layout/app-layout.compon
 // import { VideosComponent } from './pages/ui-elements/videos/videos.component';
 
 export const routes: Routes = [
-
   // HARD REDIRECT
   {
     path: '',
     redirectTo: 'auth',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
 
   {
@@ -30,42 +29,54 @@ export const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        loadComponent: () => import('./pages/dashboard/ecommerce/ecommerce.component').then(m => m.EcommerceComponent)
+        loadComponent: () =>
+          import('./pages/dashboard/ecommerce/ecommerce.component').then(
+            (m) => m.EcommerceComponent,
+          ),
       },
       {
         path: 'calendar',
-        loadComponent: () => import('./pages/calender/calender.component').then(m => m.CalenderComponent)
+        loadComponent: () =>
+          import('./pages/calender/calender.component').then((m) => m.CalenderComponent),
       },
       {
         path: 'profile',
-        loadComponent: () => import('./pages/profile/profile.component').then(m => m.ProfileComponent)
+        loadComponent: () =>
+          import('./pages/profile/profile.component').then((m) => m.ProfileComponent),
       },
       {
         path: 'form',
-        loadChildren: () => import('./pages/forms/form-routing.module').then(m => m.FormRoutingModule)
+        loadChildren: () =>
+          import('./pages/forms/form-routing.module').then((m) => m.FormRoutingModule),
       },
       {
         path: 'basic-tables',
-        loadComponent: () => import('./pages/tables/basic-tables/basic-tables.component').then(m => m.BasicTablesComponent)
+        loadComponent: () =>
+          import('./pages/tables/basic-tables/basic-tables.component').then(
+            (m) => m.BasicTablesComponent,
+          ),
       },
       {
         path: 'blank',
-        loadComponent: () => import('./pages/blank/blank.component').then(m => m.BlankComponent)
-      }, 
-    ]
+        loadComponent: () => import('./pages/blank/blank.component').then((m) => m.BlankComponent),
+      },
+    ],
   },
   // auth pages
   {
     path: 'auth',
-    loadComponent: () => import('./pages/auth-pages/sign-in/sign-in.component').then(m => m.SignInComponent),
+    loadComponent: () =>
+      import('./pages/auth-pages/sign-in/sign-in.component').then((m) => m.SignInComponent),
   },
   {
     path: 'signup',
-    loadComponent: () => import('./pages/auth-pages/sign-up/sign-up.component').then(m => m.SignUpComponent),
+    loadComponent: () =>
+      import('./pages/auth-pages/sign-up/sign-up.component').then((m) => m.SignUpComponent),
   },
   // error pages
   {
     path: '**',
-    loadComponent: () => import('./pages/other-page/not-found/not-found.component').then(m => m.NotFoundComponent),
+    loadComponent: () =>
+      import('./pages/other-page/not-found/not-found.component').then((m) => m.NotFoundComponent),
   },
 ];

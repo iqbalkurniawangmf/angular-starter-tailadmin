@@ -1,6 +1,7 @@
 <div>
   <app-page-breadcrumb pageTitle="Reactive From Multi Step" />
   <app-collapsible-card title="Transaction Form">
-    <p>Isi form di sini</p>
+    <app-stepper [steps]="steps" [clickable]="true" (stepClick)="onStepClick($event)">
+    </app-stepper>
   </app-collapsible-card>
 </div>

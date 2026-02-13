@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: 'error-404',
     component: NotFoundComponent,
-    title: 'Angular Not Found | Starter Enterprise Angular'
-  }
+    title: 'Angular Not Found | Starter Enterprise Angular',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class NotFoundRoutingModule {}

@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: 'calendar',
     component: CalenderComponent,
-    title: 'Angular Calender | Starter Enterprise Angular'
-  }
+    title: 'Angular Calender | Starter Enterprise Angular',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class CalenderRoutingModule {}

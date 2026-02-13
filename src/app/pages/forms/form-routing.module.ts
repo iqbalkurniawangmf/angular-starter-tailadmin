@@ -7,17 +7,17 @@ const routes: Routes = [
   {
     path: 'form-elements',
     component: FormElementsComponent,
-    title: 'Angular Form Element | Starter Enterprise Angular'
+    title: 'Angular Form Element | Starter Enterprise Angular',
   },
   {
     path: 'reactive-form',
     component: ReactiveFormComponent,
-    title: 'Reactive Form | Starter Enterprise Angular'
-  }
+    title: 'Reactive Form | Starter Enterprise Angular',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class FormRoutingModule {}

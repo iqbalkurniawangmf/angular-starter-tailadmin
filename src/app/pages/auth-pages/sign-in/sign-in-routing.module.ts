@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: 'auth',
     component: SignInComponent,
-    title: 'Angular Sign In | Starter Enterprise Angular'
-  }
+    title: 'Angular Sign In | Starter Enterprise Angular',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class SignInRoutingModule {}

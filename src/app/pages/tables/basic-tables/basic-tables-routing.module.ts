@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: 'basic-tables',
     component: BasicTablesComponent,
-    title: 'Angular Basic Table | Starter Enterprise Angular'
-  }
+    title: 'Angular Basic Table | Starter Enterprise Angular',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class BasicTablesRoutingModule {}
