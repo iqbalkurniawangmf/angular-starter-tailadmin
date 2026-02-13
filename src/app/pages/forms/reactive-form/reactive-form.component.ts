@@ -12,25 +12,24 @@ import { StepperComponent } from '../../../shared/components/ui/stepper/stepper.
 export class ReactiveFormComponent {
   currentStep = 1;
 
+  private stepLabels = [
+    'Basic Info',
+    'Detail Project',
+    'Review',
+    'Submit',
+    'Approval',
+    'Payment',
+    'Confirmation',
+    'Processing',
+    'Final Check',
+    'Completed',
+  ];
+
   get steps() {
-    return [
-      {
-        label: 'Basic Info',
-        status: this.getStatus(0),
-      },
-      {
-        label: 'Detail Project',
-        status: this.getStatus(1),
-      },
-      {
-        label: 'Review',
-        status: this.getStatus(2),
-      },
-      {
-        label: 'Submit',
-        status: this.getStatus(3),
-      },
-    ];
+    return this.stepLabels.map((label, index) => ({
+      label,
+      status: this.getStatus(index),
+    }));
   }
 
   getStatus(index: number): 'completed' | 'active' | 'upcoming' {
@@ -40,9 +39,6 @@ export class ReactiveFormComponent {
   }
 
   onStepClick(index: number) {
-    // contoh business rule
-    if (index <= this.currentStep) {
-      this.currentStep = index;
-    }
+    this.currentStep = index;
   }
 }
