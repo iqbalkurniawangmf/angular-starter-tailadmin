@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { PageBreadcrumbComponent } from '../../../shared/components/common/page-breadcrumb/page-breadcrumb.component';
 import { CollapsibleCardComponent } from '../../../shared/components/ui/collapsible-card/collapsible-card.component';
 import { StepperComponent } from '../../../shared/components/ui/stepper/stepper.component';
+import { DefaultInputsComponent } from "../../../shared/components/form/form-elements/default-inputs/default-inputs.component";
 
 @Component({
   selector: 'app-reactive-form',
-  imports: [PageBreadcrumbComponent, CollapsibleCardComponent, StepperComponent],
+  imports: [PageBreadcrumbComponent, CollapsibleCardComponent, StepperComponent, DefaultInputsComponent],
   templateUrl: './reactive-form.component.html',
   styles: ``,
 })
@@ -16,12 +17,7 @@ export class ReactiveFormComponent {
     'Basic Info',
     'Detail Project',
     'Review',
-    'Submit',
-    'Approval',
-    'Payment',
-    'Confirmation',
-    'Processing',
-    'Final Check',
+    'Submit', 
     'Completed',
   ];
 
